@@ -4,11 +4,39 @@
         <title>
             Nebula
         </title>
+        <style>
+            a{
+                text-decoration-color: aquamarine;
+                text-shadow: 2px -2px 0px white;
+            }
+            .bg{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw; height: 100vh;
+                background-image: url("images/space.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                z-index: -1;
+                opacity: 90%;
+            }
+            @keyframes spin {
+                from {transform: rotate(0deg);}
+                to {transform: rotate(360deg);}
+            }
+
+            .spin{
+                transform: rotate(0deg);
+            }
+            .spin:hover{
+                transform: rotate(360deg);
+                animation: spin 5s infinite linear;
+            }
+        </style>
     </head>
-<body background="images/space.png"
-    style="background-repeat:no-repeat;
-    background-size:cover;
-    background-attachment:fixed;">
+<body>
+    <div class="bg"></div>
 
     <audio preload="auto" autoplay loop>
         <source src="sounds/bg.mp3" type="audio/mpeg">
@@ -17,13 +45,10 @@
     <a href="index.html">
         <img src="images/start.jpg" alt="back" width="75px" height="50px"
         style="position: absolute;
-        top: 10%;
-        left: 95%;
-        transform: translate(-10%,-95%);
+        left: 90%;
         border: 2px solid white;
         border-radius: 10%;
-        opacity: 75%;"
-        >
+        opacity: 75%;">
     </a>
 
     <h1 style="color: beige; font-size: 500%; text-align: center; text-shadow: 2px 2px 0 red, -2px -2px 0 black;">Pillars of Creation</h1>
@@ -53,7 +78,7 @@
         <tr>
             <td>
                 <a href="https://en.wikipedia.org/wiki/Earth" target="_blank">
-                <img src="gifs/Rotating_earth_animated_transparent.gif" alt="Earth" width="300px,50%" length="50%">
+                <img src="gifs/Rotating_earth_animated_transparent.gif" alt="Earth" width="300px" length="50%">
                 </a>
             </td>
             <td>
@@ -63,15 +88,12 @@
             </td>
             <td>
                 <a href="https://en.wikipedia.org/wiki/Sun" target="_blank">
-                <img src="images/sun.png" alt="Sun" width="100%" length="100%"
+                <img class="spin" src="images/sun.png" alt="Sun" width="300px" length="300px"
                 style="position: relative;
-                left: 150%;
-                transform: translate(0,150);
-                border-radius: 100%;
-                opacity: 75%;">
+                left: 50%;">
                 </a>
             </td>
-        </tr>
+        </tr>        
     </table>
 </body>
 </html>
