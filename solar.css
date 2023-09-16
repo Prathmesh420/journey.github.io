@@ -1,62 +1,62 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.main{
-    height: 100vh;
-    background-image: url(images/space.png);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+body {
+  overflow: hidden;
+  height: 100vh;
 }
 
-.planet{
-    width: 95px;
-    height: 95px;
-    background-image: url(gifs/Rotating_earth_animated_transparent.gif);
-    background-size: cover;
-    border-radius: 50%;
-    box-shadow: inset 15px 7px 15px lightskyblue,
-    -1px 0px 3px blue,
-    inset -15px -7px 20px black,
-    1px 0px 3px white;
-    animation: rotate 10s infinite linear;
+.main {
+  height: 100vh;
+  background-image: url(images/space.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
-.moon{
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    box-shadow: inset 2px 1px 1px white,
-    inset -1px -0.5px 1px grey,
+.planet {
+  width: 95px;
+  height: 95px;
+  background-image: url(gifs/Rotating_earth_animated_transparent.gif);
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: inset 15px 7px 15px lightskyblue, -1px 0px 3px blue,
+    inset -15px -7px 20px black, 1px 0px 3px white;
+  animation: rotate 10s infinite linear;
+}
+
+.moon {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  box-shadow: inset 2px 1px 1px white, inset -1px -0.5px 1px grey,
     0px 0px 0px white;
-    position: absolute;
-    animation: rotate 10s infinite linear;
+  position: absolute;
+  animation: rotate 10s infinite linear;
 }
 
-.moon::before{
-    content: "";
-    display: block;
-    width: 30px;
-    height: 30px;
-    background-image: url(gifs/Moon_rotating_full_160px.gif);
-    background-size: cover;
-    border-radius: 100%;
-    box-shadow: inset -8px -4px 5px black,
-    inset -1px 0 20px white,
+.moon::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url(gifs/Moon_rotating_full_160px.gif);
+  background-size: cover;
+  border-radius: 100%;
+  box-shadow: inset -8px -4px 5px black, inset -1px 0 20px white,
     -1px 0 20px white;
-    margin-top: 170px;
-    margin-left: 10px;
-
+  margin-top: 170px;
+  margin-left: 10px;
 }
 
-@keyframes rotate{
-    100%{
-        transform: rotate(360deg);
-    }
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }
