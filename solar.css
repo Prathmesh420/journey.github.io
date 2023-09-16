@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    height: 100vh;
+    background-image: url(images/space.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.planet{
+    width: 95px;
+    height: 95px;
+    background-image: url(gifs/Rotating_earth_animated_transparent.gif);
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px 0 lightskyblue,
+    inset 2px 0 20px white,
+    2px 0 20px 2px white;
+    animation: rotate 15s infinite linear;
+}
+
+.moon{
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    box-shadow: inset 2px 0 0px 0 white,
+    inset 0px 0 1px 0px white,
+    0px 0 1px 0px white;
+    position: absolute;
+    animation: rotate 10s infinite linear;
+}
+
+.moon::before{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(gifs/Moon_rotating_full_160px.gif);
+    background-size: cover;
+    border-radius: 100%;
+    box-shadow: inset 1px 0 0 0 white,
+    inset 1px 0 20px 0 white,
+    1px 0 20px 0 white;
+    margin-top: 170px;
+    margin-left: 10px;
+
+}
+
+@keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
