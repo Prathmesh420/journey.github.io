@@ -27,9 +27,11 @@ body {
   background-image: url(images/sun.png);
   background-size: cover;
   border-radius: 50%;
-  box-shadow: inset 15px 7px 30px lightyellow, -1px 0px 3px lightsalmon,
-    inset -15px -7px 50px gold, 1px 0px 3px white;
-  animation: rotate 50s infinite linear;
+  box-shadow: inset 20px 0px 40px rgb(255, 255, 155), 2px 0px 20px white,
+    inset -20px 0px 40px rgb(255, 255, 155), -2px 0px 20px white,
+    inset 0px 20px 40px rgb(255, 255, 155), 0px 2px 20px rgb(255, 255, 155),
+    inset 0px -20px 40px rgb(255, 255, 155), 0px -2px 20px rgb(255, 255, 155);
+  animation: rotate 5s infinite linear;
 }
 
 .earth {
